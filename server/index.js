@@ -121,7 +121,12 @@ app.post("/api/quizzes/:id/submit", async (req, res) => {
 
 // Catch-all: serve React app for any non-API route
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+  const indexPath = path.join(__dirname, "../client/build", "index.html");
+  if (fs.existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.status(500).send("Client build not found. Run 'npm run build' in the client directory first.");
+  }
 });
 
 app.listen(PORT, () => {

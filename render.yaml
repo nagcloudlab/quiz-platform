@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: quiz-platform
+    runtime: node
+    buildCommand: cd client && npm install && npm run build && cd ../server && npm install
+    startCommand: cd server && node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GOOGLE_SHEETS_ID
+        sync: false
+      - key: GOOGLE_SERVICE_ACCOUNT_EMAIL
+        sync: false
+      - key: GOOGLE_PRIVATE_KEY
+        sync: false
