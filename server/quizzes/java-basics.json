@@ -1,0 +1,103 @@
+{
+  "id": "java-basics",
+  "title": "Java Basics",
+  "description": "Fundamentals of Java programming",
+  "timeLimit": 600,
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Which of the following is the correct way to declare a main method in Java?",
+      "code": "// Which is correct?\nA) public void main(String[] args)\nB) public static void main(String[] args)\nC) static public main(String args[])\nD) public static int main(String[] args)",
+      "options": [
+        "A) public void main(String[] args)",
+        "B) public static void main(String[] args)",
+        "C) static public main(String args[])",
+        "D) public static int main(String[] args)"
+      ],
+      "answer": 1,
+      "explanation": "The main method must be public, static, void, and accept String[] args."
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "What is the output of the following code?",
+      "code": "int x = 10;\nint y = 3;\nSystem.out.println(x / y);",
+      "options": ["3.33", "3", "3.0", "Compilation error"],
+      "answer": 1,
+      "explanation": "Integer division in Java truncates the decimal part. 10/3 = 3."
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Which data type is used to store a single character in Java?",
+      "options": ["String", "char", "Character", "byte"],
+      "answer": 1,
+      "explanation": "char is the primitive data type for a single 16-bit Unicode character."
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "What is the default value of a boolean variable in Java?",
+      "options": ["true", "false", "null", "0"],
+      "answer": 1,
+      "explanation": "The default value of a boolean in Java is false."
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "What will be the output of this code?",
+      "code": "String s1 = \"Hello\";\nString s2 = \"Hello\";\nSystem.out.println(s1 == s2);\nSystem.out.println(s1.equals(s2));",
+      "options": ["true true", "false true", "true false", "false false"],
+      "answer": 0,
+      "explanation": "Both are true here because string literals are stored in the String pool. s1 == s2 compares references (same pool object), and .equals() compares content."
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Which keyword is used to prevent a class from being inherited?",
+      "options": ["static", "final", "abstract", "private"],
+      "answer": 1,
+      "explanation": "The 'final' keyword prevents a class from being subclassed."
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "What is the output of this code?",
+      "code": "int[] arr = {1, 2, 3, 4, 5};\nSystem.out.println(arr.length);",
+      "options": ["4", "5", "Compilation error", "Runtime error"],
+      "answer": 1,
+      "explanation": "The array has 5 elements, so arr.length returns 5. Note: length is a field for arrays, not a method."
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Which of these is NOT a valid Java access modifier?",
+      "options": ["public", "private", "protected", "friend"],
+      "answer": 3,
+      "explanation": "'friend' is not a Java access modifier. Java has public, private, protected, and default (no keyword)."
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "What does the 'static' keyword mean when applied to a method?",
+      "options": [
+        "The method cannot be overridden",
+        "The method belongs to the class, not instances",
+        "The method can only be called once",
+        "The method runs at compile time"
+      ],
+      "answer": 1,
+      "explanation": "A static method belongs to the class itself and can be called without creating an instance."
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "What is the output of this code?",
+      "code": "for (int i = 0; i < 5; i++) {\n    if (i == 3) break;\n    System.out.print(i + \" \");\n}",
+      "options": ["0 1 2 3", "0 1 2", "0 1 2 3 4", "1 2 3"],
+      "answer": 1,
+      "explanation": "The loop prints 0, 1, 2 and then breaks when i equals 3."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "java-oops",
+  "title": "Java OOP Concepts",
+  "description": "Object-Oriented Programming in Java",
+  "timeLimit": 600,
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Which OOP principle is demonstrated by method overloading?",
+      "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
+      "answer": 1,
+      "explanation": "Method overloading is a form of compile-time (static) polymorphism."
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "What is the output of this code?",
+      "code": "class Animal {\n    void sound() { System.out.println(\"Animal sound\"); }\n}\nclass Dog extends Animal {\n    void sound() { System.out.println(\"Bark\"); }\n}\n\nAnimal a = new Dog();\na.sound();",
+      "options": ["Animal sound", "Bark", "Compilation error", "Runtime error"],
+      "answer": 1,
+      "explanation": "This is runtime polymorphism. The actual object is Dog, so Dog's sound() method is called."
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Can a Java class extend multiple classes?",
+      "options": [
+        "Yes, always",
+        "No, Java does not support multiple inheritance of classes",
+        "Yes, but only abstract classes",
+        "Yes, if they are in the same package"
+      ],
+      "answer": 1,
+      "explanation": "Java does not support multiple inheritance of classes. A class can extend only one class but implement multiple interfaces."
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "What is encapsulation in Java?",
+      "options": [
+        "Wrapping data and methods in a single unit with restricted access",
+        "Creating objects from classes",
+        "Inheriting properties from parent class",
+        "Defining abstract methods"
+      ],
+      "answer": 0,
+      "explanation": "Encapsulation is bundling data (fields) and methods that operate on that data, restricting direct access using access modifiers."
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Which keyword is used to call the parent class constructor?",
+      "options": ["this", "super", "parent", "base"],
+      "answer": 1,
+      "explanation": "The 'super' keyword is used to call the parent class constructor. It must be the first statement in the child constructor."
+    }
+  ]
+}
